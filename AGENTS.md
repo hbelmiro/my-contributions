@@ -53,6 +53,12 @@ For each repo, collect:
     --jq '[.[] | {a: .additions, d: .deletions}] | {total_additions: (map(.a) | add), total_deletions: (map(.d) | add), pr_count: length}'
   ```
 
+- **OWNERS roles** (approver/reviewer) across kubeflow org repos. OWNERS files live in local repo checkouts, not on GitHub API — scan with:
+  ```
+  find <repo-root> -name OWNERS | xargs grep -l <username>
+  ```
+  Then read each matching file to classify the role (approver, reviewer, or both) and the directory scope.
+
 Run independent queries in parallel for efficiency.
 
 ### 3. Organize the report
@@ -80,9 +86,11 @@ Frame the report around **leadership impact**, not just a raw list. The report s
 
 5. **Open PRs** to show ongoing work and forward-looking initiatives.
 
-6. **Merged PRs in secondary repos** as separate sections with their own tables.
+6. **Governance — OWNERS roles** across kubeflow org repos, showing where the contributor holds approver and/or reviewer roles. Organize by repo, with a table per repo listing path, approver (Yes/—), and reviewer (Yes/—).
 
-7. **Contribution highlights** at the end — a curated narrative section that calls out the most impactful work, grouped by theme:
+7. **Merged PRs in secondary repos** as separate sections with their own tables.
+
+8. **Contribution highlights** at the end — a curated narrative section that calls out the most impactful work, grouped by theme:
    - Security improvements
    - Architecture and design contributions (KEPs, major refactors, migrations)
    - CI/CD ownership

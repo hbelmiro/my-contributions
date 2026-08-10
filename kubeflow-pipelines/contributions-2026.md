@@ -215,6 +215,37 @@ Reviews span backend, CI, frontend, SDK, testing, and governance areas. Notable 
 
 ---
 
+## Governance — OWNERS Roles
+
+### kubeflow/pipelines
+
+| Path                   | Approver | Reviewer |
+|------------------------|----------|----------|
+| `.github/`             | Yes      | —        |
+| `backend/`             | Yes      | Yes      |
+| `docs/`                | Yes      | —        |
+| `kubernetes_platform/` | Yes      | Yes      |
+| `manifests/kustomize/` | —        | Yes      |
+| `tools/`               | —        | Yes      |
+
+### kubeflow/pipelines-components
+
+| Path         | Approver | Reviewer |
+|--------------|----------|----------|
+| `/` (root)   | Yes      | —        |
+| `.github/`   | Yes      | Yes      |
+| `docs/`      | Yes      | Yes      |
+| `scripts/`   | Yes      | Yes      |
+| `test_data/` | Yes      | Yes      |
+
+### kubeflow/website
+
+| Path                                    | Approver | Reviewer |
+|-----------------------------------------|----------|----------|
+| `content/en/docs/components/pipelines/` | Yes      | —        |
+
+---
+
 ## Contribution Highlights
 
 ### Security
