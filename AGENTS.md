@@ -16,6 +16,8 @@ Ask the user which GitHub repos to include. A single project may span multiple r
 
 ### 2. Gather data with `gh`
 
+**Never rely on local checkouts for any data.** Their remotes may point at forks and their branches may be stale. Always gather data from the live upstream source: the GitHub API (`gh`) for PRs, reviews, and issues, and a fresh fetch from the upstream remote for file contents (OWNERS, etc.).
+
 For each repo, collect:
 
 - **Merged PRs authored** in the target year:
@@ -53,11 +55,15 @@ For each repo, collect:
     --jq '[.[] | {a: .additions, d: .deletions}] | {total_additions: (map(.a) | add), total_deletions: (map(.d) | add), pr_count: length}'
   ```
 
-- **OWNERS roles** (approver/reviewer) across kubeflow org repos. OWNERS files live in local repo checkouts, not on GitHub API — scan with:
+- **OWNERS roles** (approver/reviewer) across kubeflow org repos. Preferred: a sparse, blob-filtered clone of the real repo:
   ```
-  find <repo-root> -name OWNERS | xargs grep -l <username>
+  git clone --depth 1 --filter=blob:none --sparse https://github.com/<org>/<repo>.git /tmp/<repo>-owners-check
+  cd /tmp/<repo>-owners-check
+  git sparse-checkout set --no-cone '/**/OWNERS'
+  find . -name OWNERS | xargs grep -l <username>
   ```
-  Then read each matching file to classify the role (approver, reviewer, or both) and the directory scope.
+  Alternative for single files: `gh api repos/<org>/<repo>/contents/<path>/OWNERS --jq '.content' | base64 -d`.
+  Then read each matching file to classify the role (approver, reviewer, or both) and the directory scope. Clean up the temporary clone afterwards.
 
 Run independent queries in parallel for efficiency.
 
@@ -82,7 +88,7 @@ Frame the report around **leadership impact**, not just a raw list. The report s
 
 3. **Issues filed** as a table showing proactive identification of problems.
 
-4. **Code reviews** — full table of PRs reviewed from other contributors, showing the author. This demonstrates mentoring and quality gate ownership.
+4. **Code reviews** — full table of PRs reviewed from other contributors, showing the author. This demonstrates mentoring and quality gate ownership. Separate automated dependency bumps (PRs authored by `dependabot[bot]` or `renovate[bot]` — classify by PR author, not title) into their own subsection; count them separately from human reviews in the summary and highlights.
 
 5. **Open PRs** to show ongoing work and forward-looking initiatives.
 

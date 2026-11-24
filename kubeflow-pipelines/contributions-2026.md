@@ -1,18 +1,18 @@
 # Kubeflow Pipelines Contribution Report — Helber Belmiro (@hbelmiro)
 
-**Period:** January 2026 – October 2026
+**Period:** January 2026 – November 2026
 
 ## Summary
 
 | Area                                              | Count             |
 |---------------------------------------------------|-------------------|
-| PRs merged in kubeflow/pipelines                  | 45                |
-| PRs reviewed in kubeflow/pipelines (others' PRs)  | 72                |
+| PRs merged in kubeflow/pipelines                  | 48                |
+| PRs reviewed in kubeflow/pipelines (others' PRs)  | 71 (+2 Dependabot) |
 | Issues filed in kubeflow/pipelines                | 19                |
-| PRs merged in kubeflow/pipelines-components       | 21                |
-| PRs reviewed in kubeflow/pipelines-components (others' PRs) | 50       |
-| Lines changed in kubeflow/pipelines               | +19,966 / -8,528 |
-| Lines changed in kubeflow/pipelines-components    | +5,428 / -1,046  |
+| PRs merged in kubeflow/pipelines-components       | 22                |
+| PRs reviewed in kubeflow/pipelines-components (others' PRs) | 15 (+38 Dependabot) |
+| Lines changed in kubeflow/pipelines               | +20,268 / -8,536 |
+| Lines changed in kubeflow/pipelines-components    | +5,471 / -1,050  |
 | Open PRs                                          | 0                 |
 
 ---
@@ -51,6 +51,9 @@
 
 | PR | Title | Merged |
 |----|-------|--------|
+| [#15914](https://github.com/kubeflow/pipelines/pull/15914) | chore(deps): update transitive dependencies via Dependabot | 2026-11-24 |
+| [#15695](https://github.com/kubeflow/pipelines/pull/15695) | fix(ci): close cert-manager install race in TLS-enabled lanes | 2026-11-20 |
+| [#15768](https://github.com/kubeflow/pipelines/pull/15768) | fix(ci): format ci_pass_eligibility_test.py with ruff | 2026-11-18 |
 | [#15169](https://github.com/kubeflow/pipelines/pull/15169) | fix(ci): pin pre-commit lint hooks to Python 3.11 | 2026-10-26 |
 | [#14351](https://github.com/kubeflow/pipelines/pull/14351) | ci: align isort version | 2026-09-30 |
 | [#13771](https://github.com/kubeflow/pipelines/pull/13771) | ci: build API generator from source in CI to prevent stale files | 2026-07-27 |
@@ -118,13 +121,13 @@
 | [#12725](https://github.com/kubeflow/pipelines/issues/12725) | chore(<backend>): Refactor Driver and Launcher: Make All Parameters Required | closed | 2026-01-29 |
 | [#12686](https://github.com/kubeflow/pipelines/issues/12686) | chore(sdk): Migrate Python dependency management to uv workspaces | closed | 2026-01-21 |
 
-## kubeflow/pipelines — Code Reviews (72 PRs from other contributors)
+## kubeflow/pipelines — Code Reviews (71 PRs from other contributors)
 
 | PR | Title | Author | Merged |
 |----|-------|--------|--------|
+| [#15771](https://github.com/kubeflow/pipelines/pull/15771) | fix(ci): read queue conversation policy with workflow permissions | @jeffspahr | 2026-11-18 |
 | [#12987](https://github.com/kubeflow/pipelines/pull/12987) | feat: fail pipeline runs on image pull failures | @jsonmp-k8 | 2026-10-27 |
 | [#14713](https://github.com/kubeflow/pipelines/pull/14713) | fix(deps): align Dependabot ownership and remove tracked workspace exports | @jeffspahr | 2026-10-13 |
-| [#14634](https://github.com/kubeflow/pipelines/pull/14634) | chore(deps): bump golang in /backend | @dependabot[bot] | 2026-10-02 |
 | [#12379](https://github.com/kubeflow/pipelines/pull/12379) | feat(backend): postgres integration | @kaikaila | 2026-09-08 |
 | [#13891](https://github.com/kubeflow/pipelines/pull/13891) | fix(backend): make remaining kind-cluster wait timeouts configurable | @Sharkyii | 2026-08-26 |
 | [#13711](https://github.com/kubeflow/pipelines/pull/13711) | chore(backend): validate required driver and launcher flags | @Priyanshu-u07 | 2026-08-11 |
@@ -192,17 +195,24 @@
 | [#12694](https://github.com/kubeflow/pipelines/pull/12694) | Fix: pip upgrade in backend API Dockerfile | @sduvvuri1603 | 2026-01-23 |
 | [#12657](https://github.com/kubeflow/pipelines/pull/12657) | fix(ci): port-forward minio-service instead of pod | @kaikaila | 2026-01-16 |
 | [#12631](https://github.com/kubeflow/pipelines/pull/12631) | chore: remove disabled renovate.json5 config | @jeffspahr | 2026-01-09 |
-| [#12629](https://github.com/kubeflow/pipelines/pull/12629) | chore(deps): bump werkzeug from 3.1.3 to 3.1.5 in /backend/src/apiserver/visualization | @dependabot[bot] | 2026-01-09 |
 | [#12572](https://github.com/kubeflow/pipelines/pull/12572) | Update CA Cert Conditional | @alyssacgoins | 2026-01-05 |
+
+### Automated dependency bumps reviewed (Dependabot) (2)
+
+| PR | Title | Author | Merged |
+|----|-------|--------|--------|
+| [#14634](https://github.com/kubeflow/pipelines/pull/14634) | chore(deps): bump golang in /backend | @dependabot[bot] | 2026-10-02 |
+| [#12629](https://github.com/kubeflow/pipelines/pull/12629) | chore(deps): bump werkzeug from 3.1.3 to 3.1.5 in /backend/src/apiserver/visualization | @dependabot[bot] | 2026-01-09 |
 
 ## kubeflow/pipelines — Open PRs
 
 No open PRs — all authored work has been merged or closed.
 
-## kubeflow/pipelines-components — Merged PRs (21)
+## kubeflow/pipelines-components — Merged PRs (22)
 
 | PR | Title | Merged |
 |----|-------|--------|
+| [#218](https://github.com/kubeflow/pipelines-components/pull/218) | ci: install gh CLI in jobs that use it | 2026-11-04 |
 | [#213](https://github.com/kubeflow/pipelines-components/pull/213) | fix: remove stale kfp_components root package entries | 2026-10-20 |
 | [#193](https://github.com/kubeflow/pipelines-components/pull/193) | Add hbelmiro to approvers list in OWNERS file | 2026-08-05 |
 | [#186](https://github.com/kubeflow/pipelines-components/pull/186) | fix(scripts): move tests into tests/ for CI discovery | 2026-07-23 |
@@ -225,32 +235,47 @@ No open PRs — all authored work has been merged or closed.
 | [#50](https://github.com/kubeflow/pipelines-components/pull/50) | test: Standardize test imports to use relative imports | 2026-01-02 |
 | [#8](https://github.com/kubeflow/pipelines-components/pull/8) | Added CI workflows for building, validating, and testing custom base images | 2026-01-23 |
 
-## kubeflow/pipelines-components — Code Reviews (50 PRs from other contributors)
+## kubeflow/pipelines-components — Code Reviews (15 PRs from other contributors)
 
 | PR | Title | Author | Merged |
 |----|-------|--------|--------|
-| [#214](https://github.com/kubeflow/pipelines-components/pull/214) | chore(deps): Bump certifi from 2026.2.25 to 2026.10.19 | @dependabot[bot] | 2026-10-23 |
 | [#201](https://github.com/kubeflow/pipelines-components/pull/201) | fix: allow pytest to run in git worktrees | @Ehtasham-Yasin | 2026-10-02 |
 | [#200](https://github.com/kubeflow/pipelines-components/pull/200) | fix: reject future metadata verification dates | @Ehtasham-Yasin | 2026-10-02 |
 | [#199](https://github.com/kubeflow/pipelines-components/pull/199) | fix(scripts): handle empty metadata.yaml in check_component_freshness. Fixes #198 | @rautaditya2606 | 2026-10-02 |
+| [#180](https://github.com/kubeflow/pipelines-components/pull/180) | chore: Introduce jsonschema for metadata files validation | @filip-komarzyniec | 2026-08-10 |
+| [#127](https://github.com/kubeflow/pipelines-components/pull/127) | feat(ci): add container build matrix check. Fixes #119 | @prachimaskar | 2026-05-27 |
+| [#151](https://github.com/kubeflow/pipelines-components/pull/151) | ci(fix): fixing cyclic dependency in check ci status | @nsingla | 2026-05-07 |
+| [#141](https://github.com/kubeflow/pipelines-components/pull/141) | ci: Remove workflow branch filters so CI runs on all target branches | @VaniHaripriya | 2026-04-15 |
+| [#88](https://github.com/kubeflow/pipelines-components/pull/88) | feat: sdg component | @beatsmonster | 2026-04-07 |
+| [#94](https://github.com/kubeflow/pipelines-components/pull/94) | feat: Add Components and Pipelines Subcategories Support | @VaniHaripriya | 2026-02-25 |
+| [#83](https://github.com/kubeflow/pipelines-components/pull/83) | fix: Tighten compile-check metadata helpers and Workflow triggers | @sduvvuri1603 | 2026-01-23 |
+| [#13](https://github.com/kubeflow/pipelines-components/pull/13) | Add compile check tooling and CI workflow | @sduvvuri1603 | 2026-01-22 |
+| [#29](https://github.com/kubeflow/pipelines-components/pull/29) | Add a CI check to ensure packages entries in pyproject.toml are up to date | @VaniHaripriya | 2026-01-12 |
+| [#35](https://github.com/kubeflow/pipelines-components/pull/35) | feat(scripts): Write script to check and report component/pipeline freshness | @gmfrasca | 2026-01-09 |
+| [#56](https://github.com/kubeflow/pipelines-components/pull/56) | fix(CI): Add missing CI dependencies and pin them | @mprahl | 2026-01-05 |
+| [#55](https://github.com/kubeflow/pipelines-components/pull/55) | chore: fixing yaml template linting issues | @nsingla | 2026-01-02 |
+
+### Automated dependency bumps reviewed (Dependabot) (38)
+
+| PR | Title | Author | Merged |
+|----|-------|--------|--------|
+| [#219](https://github.com/kubeflow/pipelines-components/pull/219) | chore(deps): Bump oauthlib from 4.0.0 to 4.0.1 | @dependabot[bot] | 2026-11-06 |
+| [#217](https://github.com/kubeflow/pipelines-components/pull/217) | chore(deps): Bump pyasn1 from 0.6.3 to 0.6.5 | @dependabot[bot] | 2026-11-04 |
+| [#215](https://github.com/kubeflow/pipelines-components/pull/215) | chore(deps): Bump filelock from 3.25.2 to 4.2.1 | @dependabot[bot] | 2026-11-03 |
+| [#214](https://github.com/kubeflow/pipelines-components/pull/214) | chore(deps): Bump certifi from 2026.2.25 to 2026.10.19 | @dependabot[bot] | 2026-10-23 |
 | [#207](https://github.com/kubeflow/pipelines-components/pull/207) | chore(deps): Bump oauthlib from 3.3.1 to 4.0.0 | @dependabot[bot] | 2026-10-02 |
 | [#204](https://github.com/kubeflow/pipelines-components/pull/204) | chore(deps): Bump urllib3 from 2.6.3 to 2.8.0 | @dependabot[bot] | 2026-10-02 |
 | [#203](https://github.com/kubeflow/pipelines-components/pull/203) | chore(deps): Bump pyjwt from 2.12.1 to 2.15.0 | @dependabot[bot] | 2026-10-02 |
 | [#205](https://github.com/kubeflow/pipelines-components/pull/205) | chore(deps): Bump litellm from 1.82.5 to 1.88.6 | @dependabot[bot] | 2026-10-02 |
 | [#197](https://github.com/kubeflow/pipelines-components/pull/197) | chore(deps): Bump anyio from 4.12.1 to 4.14.2 | @dependabot[bot] | 2026-09-30 |
 | [#194](https://github.com/kubeflow/pipelines-components/pull/194) | chore(deps): Bump pip from 26.0.1 to 26.2 | @dependabot[bot] | 2026-09-01 |
-| [#180](https://github.com/kubeflow/pipelines-components/pull/180) | chore: Introduce jsonschema for metadata files validation | @filip-komarzyniec | 2026-08-10 |
 | [#192](https://github.com/kubeflow/pipelines-components/pull/192) | chore(deps): Bump cryptography from 46.0.5 to 50.0.0 | @dependabot[bot] | 2026-08-05 |
 | [#191](https://github.com/kubeflow/pipelines-components/pull/191) | chore(deps): Bump aiohttp from 3.13.3 to 3.14.3 | @dependabot[bot] | 2026-08-05 |
-| [#127](https://github.com/kubeflow/pipelines-components/pull/127) | feat(ci): add container build matrix check. Fixes #119 | @prachimaskar | 2026-05-27 |
 | [#160](https://github.com/kubeflow/pipelines-components/pull/160) | chore(deps): Bump docker/metadata-action from 6.0.0 to 6.1.0 | @dependabot[bot] | 2026-05-27 |
 | [#158](https://github.com/kubeflow/pipelines-components/pull/158) | chore(deps): Bump docker/login-action from 3.7.0 to 4.2.0 | @dependabot[bot] | 2026-05-26 |
 | [#157](https://github.com/kubeflow/pipelines-components/pull/157) | chore(deps): Bump docker/setup-buildx-action from 4.0.0 to 4.1.0 | @dependabot[bot] | 2026-05-26 |
 | [#156](https://github.com/kubeflow/pipelines-components/pull/156) | chore(deps): Bump docker/build-push-action from 7.1.0 to 7.2.0 | @dependabot[bot] | 2026-05-21 |
-| [#151](https://github.com/kubeflow/pipelines-components/pull/151) | ci(fix): fixing cyclic dependency in check ci status | @nsingla | 2026-05-07 |
-| [#141](https://github.com/kubeflow/pipelines-components/pull/141) | ci: Remove workflow branch filters so CI runs on all target branches | @VaniHaripriya | 2026-04-15 |
 | [#136](https://github.com/kubeflow/pipelines-components/pull/136) | chore(deps): Bump actions/github-script from 8 to 9 | @dependabot[bot] | 2026-04-15 |
-| [#88](https://github.com/kubeflow/pipelines-components/pull/88) | feat: sdg component | @beatsmonster | 2026-04-07 |
 | [#120](https://github.com/kubeflow/pipelines-components/pull/120) | chore(deps): Bump actions/upload-artifact from 4 to 7 | @dependabot[bot] | 2026-03-17 |
 | [#113](https://github.com/kubeflow/pipelines-components/pull/113) | chore(deps): Bump docker/build-push-action from 6 to 7 | @dependabot[bot] | 2026-03-06 |
 | [#112](https://github.com/kubeflow/pipelines-components/pull/112) | chore(deps): Bump docker/metadata-action from 5 to 6 | @dependabot[bot] | 2026-03-06 |
@@ -258,7 +283,6 @@ No open PRs — all authored work has been merged or closed.
 | [#109](https://github.com/kubeflow/pipelines-components/pull/109) | chore(deps): Bump docker/setup-buildx-action from 3 to 4 | @dependabot[bot] | 2026-03-05 |
 | [#105](https://github.com/kubeflow/pipelines-components/pull/105) | chore(deps): Bump actions/download-artifact from 7 to 8 | @dependabot[bot] | 2026-02-27 |
 | [#104](https://github.com/kubeflow/pipelines-components/pull/104) | chore(deps): Bump actions/upload-artifact from 6 to 7 | @dependabot[bot] | 2026-02-27 |
-| [#94](https://github.com/kubeflow/pipelines-components/pull/94) | feat: Add Components and Pipelines Subcategories Support | @VaniHaripriya | 2026-02-25 |
 | [#101](https://github.com/kubeflow/pipelines-components/pull/101) | chore(deps): Bump ruff from 0.15.1 to 0.15.2 | @dependabot[bot] | 2026-02-23 |
 | [#98](https://github.com/kubeflow/pipelines-components/pull/98) | chore(deps): Bump ruff from 0.14.12 to 0.15.1 | @dependabot[bot] | 2026-02-13 |
 | [#93](https://github.com/kubeflow/pipelines-components/pull/93) | chore(deps): Bump pip from 26.0 to 26.0.1 | @dependabot[bot] | 2026-02-13 |
@@ -267,18 +291,12 @@ No open PRs — all authored work has been merged or closed.
 | [#89](https://github.com/kubeflow/pipelines-components/pull/89) | chore(deps): Bump pip from 25.3 to 26.0 | @dependabot[bot] | 2026-02-04 |
 | [#85](https://github.com/kubeflow/pipelines-components/pull/85) | chore(deps): Bump packaging from 25.0 to 26.0 | @dependabot[bot] | 2026-02-04 |
 | [#90](https://github.com/kubeflow/pipelines-components/pull/90) | chore(deps): Bump protobuf from 6.33.2 to 6.33.5 | @dependabot[bot] | 2026-02-04 |
-| [#83](https://github.com/kubeflow/pipelines-components/pull/83) | fix: Tighten compile-check metadata helpers and Workflow triggers | @sduvvuri1603 | 2026-01-23 |
 | [#81](https://github.com/kubeflow/pipelines-components/pull/81) | chore(deps): Bump actions/checkout from 4 to 6 | @dependabot[bot] | 2026-01-23 |
 | [#84](https://github.com/kubeflow/pipelines-components/pull/84) | chore(deps): Bump scikit-learn from 1.4.0 to 1.5.0 in /docs/examples | @dependabot[bot] | 2026-01-23 |
-| [#13](https://github.com/kubeflow/pipelines-components/pull/13) | Add compile check tooling and CI workflow | @sduvvuri1603 | 2026-01-22 |
 | [#69](https://github.com/kubeflow/pipelines-components/pull/69) | chore(deps): Bump yamllint from 1.35.1 to 1.38.0 | @dependabot[bot] | 2026-01-13 |
 | [#66](https://github.com/kubeflow/pipelines-components/pull/66) | chore(deps): Bump ruff from 0.8.4 to 0.14.11 | @dependabot[bot] | 2026-01-13 |
 | [#68](https://github.com/kubeflow/pipelines-components/pull/68) | chore(deps): Bump actions/checkout from 4 to 6 | @dependabot[bot] | 2026-01-13 |
-| [#29](https://github.com/kubeflow/pipelines-components/pull/29) | Add a CI check to ensure packages entries in pyproject.toml are up to date | @VaniHaripriya | 2026-01-12 |
-| [#35](https://github.com/kubeflow/pipelines-components/pull/35) | feat(scripts): Write script to check and report component/pipeline freshness | @gmfrasca | 2026-01-09 |
 | [#58](https://github.com/kubeflow/pipelines-components/pull/58) | chore(deps): Bump actions/checkout from 4 to 6 | @dependabot[bot] | 2026-01-06 |
-| [#56](https://github.com/kubeflow/pipelines-components/pull/56) | fix(CI): Add missing CI dependencies and pin them | @mprahl | 2026-01-05 |
-| [#55](https://github.com/kubeflow/pipelines-components/pull/55) | chore: fixing yaml template linting issues | @nsingla | 2026-01-02 |
 
 ## Governance — OWNERS Roles
 
@@ -338,6 +356,6 @@ No open PRs — all authored work has been merged or closed.
 - Fixed Kubernetes-store version bugs (same-named versions, `GetPipelineVersionByName`), MLflow E2E flakiness (polling instead of single-shot checks), informer cache sync races, and broke the `isV2Spec` infinite loop on malformed YAML.
 
 ### Community and Mentoring
-- 122 code reviews across both repos, including first-time and external contributors (shivv23, Sharkyii, Daniel-1600, Ehtasham-Yasin, rautadadya2606 and others).
+- 86 code reviews from other contributors, including first-time and external contributors, plus 40 automated dependency bumps reviewed (Dependabot) (shivv23, Sharkyii, Daniel-1600, Ehtasham-Yasin, rautadadya2606 and others).
 - 19 issues filed covering backend bugs, flaky tests, CI outages, and feature KEPs.
-- OWNERS governance: approver across 14 paths spanning kubeflow/pipelines, kubeflow/pipelines-components, and kubeflow/website; pruned inactive reviewers/approvers ([#13389](https://github.com/kubeflow/pipelines/pull/13389), [#161](https://github.com/kubeflow/pipelines-components/pull/161)).
+- OWNERS governance: approver across 15 paths spanning kubeflow/pipelines, kubeflow/pipelines-components, and kubeflow/website; pruned inactive reviewers/approvers ([#13389](https://github.com/kubeflow/pipelines/pull/13389), [#161](https://github.com/kubeflow/pipelines-components/pull/161)).
