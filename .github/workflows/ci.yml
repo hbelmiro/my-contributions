@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: npx -y markdownlint-cli2 "**/*.md"
+
+  dependabot-automerge:
+    needs: markdownlint
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hbelmiro/dependabot-automerge@79b1583cb6482adde47f3aca4ff6fdeb71a71a8b # v1.1.0
+        with:
+          merge-method: squash
+          delete-branch: true

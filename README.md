@@ -6,4 +6,5 @@ Each report covers merged PRs (categorized by area), code reviews, issues filed,
 
 ## Projects
 
-- [Kubeflow Pipelines](kubeflow-pipelines/contributions-2026.md) — `kubeflow/pipelines`, `kubeflow/pipelines-components`
+- [Kubeflow Pipelines](kubeflow-pipelines/README.md) — `kubeflow/pipelines`, `kubeflow/pipelines-components`
+- [ODH / RHDS](odh-rhds/README.md) — `opendatahub-io` and `red-hat-data-services` orgs (Data Science Pipelines ecosystem and supporting repos)
